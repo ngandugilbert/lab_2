@@ -19,7 +19,7 @@ import java.util.*;
  * Then swap the first digit with the third,
  * and swap the second digit with the fourth
  */
-public class Cryptography {
+public class Program {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -27,15 +27,14 @@ public class Cryptography {
 
         System.out.println("\nWelcome to cryptography");
 
-        System.out.print("\n1. Encrypt\n2. Decrypt\nchoice:");
-        choice = input.nextInt();
-        menu(choice);
-
-        System.out.print("Do you wish to continue?\n1.Yes\nAny other key to quit.\n");
-        if (choice == 1)
-            choice = 0;
-        else
-            choice = 4;
+        try {
+            System.out.print("\n1. Encrypt\n2. Decrypt\nchoice:");
+            choice = input.nextInt();
+            menu(choice);
+        } catch (Exception e) {
+            System.out.println("The input you entered is invalid");
+            System.out.print("Your input was invalid again, try again later.");
+        }
 
         input.close();
     }
@@ -72,16 +71,13 @@ public class Cryptography {
                 // encrypt
                 encrypt();
                 break;
-
             case 2:
                 // decrypt
                 decrypt();
                 break;
-
             case 3:
                 System.out.print("Goodbye :(");
                 break;
-
             default:
                 System.out.println("Please select a valid input.");
                 break;

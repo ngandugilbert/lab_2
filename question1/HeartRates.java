@@ -101,4 +101,10 @@ public class HeartRates {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return String.format("%.2f\t\t\t%.2f - %.2f", this.getMaxHeartRate(), this.getLowerRange(),
+                this.getUpperRange());
+    }
+
 }

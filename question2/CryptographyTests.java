@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class EncryptTests {
+public class CryptographyTests {
     // test for encrytion
     @Test
     public void encryptTest() {

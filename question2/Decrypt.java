@@ -24,7 +24,7 @@ import java.util.*;
 
 public class Decrypt {
     private String decrypted;
-    private ArrayList<Integer> bucket = new ArrayList<Integer>();
+    private ArrayList<Integer> bucket = new ArrayList<Integer>(); // Temporary storage values of the key to decrypt
 
     public Decrypt() {
         this("0000");
